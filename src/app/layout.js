@@ -15,17 +15,17 @@ export const metadata = {
   manifest: "/manifest.json",
   keywords: ["nextjs", "nextjs13", "next13", "pwa", "next-pwa"],
   themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
-  authors: [{ name: 'renovatt' }, { name: 'renovatt', url: 'https://www.linkedin.com/in/renovatt/' }],
+
   viewport: "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
   
   openGraph: {
     type: "website",
-    url: "https://next13-with-pwa-renovatt.vercel.app",
+    url: "https://whatsapp-test.netlify.app",
     title: APP_NAME,
     description: APP_DESCRIPTION,
     siteName: APP_NAME,
     images: [{
-      url: "https://next13-with-pwa-renovatt.vercel.app/next-pwa.png",
+      url: "https://whatsapp-test.netlify.app/next-pwa.png",
     }],
   },
   
