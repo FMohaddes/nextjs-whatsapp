@@ -1,27 +1,94 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+*,
+*::after,
+::before {
+  padding         : 0;
+  margin          : 0;
+  text-decoration : none;
+  box-sizing      : border-box;
+  
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+:root {
+  
+  --primay-color:#202c33;
+  --gray-100:#EEE;
+  --gray-150:#D4D2D2;
+  --gray-200:#939393;
+  --gray-250:#707070;
+  --gray-400:#414141;
+  --warning         : #f3c41e ,
+  
+  }
+
+@layer utilities {
+  html{
+    font-size:16px;
+    }
+  
+  @media only screen and (max-width: 1000px){
+    html{
+      font-size:14px;
+      }
+    }
+  @media only screen and (max-width: 700px){
+    html{
+      font-size:13px;
+      }
+    }
+  @media only screen and (max-width: 600px){
+    html{
+      font-size:12px;
+      }
+    }
+  }
+
+body{
+  
+  color:var(--gray-400);
+  background:#202c33;
+  
+  }
+
+/* The emerging W3C standard */
+* {
+  scrollbar-width : thin;
+  scrollbar-color : #0000 transparent;
+  }
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height : 8px;
+  
+  }
+
+@media only screen and (max-width: 600px) {
+  /* Works on Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    height : 2px;
+    }
+    
+  }
+*::-webkit-scrollbar-track {
+  background : transparent;
+  }
+
+*::-webkit-scrollbar-thumb {
+  background : var(--primay-color);
+  border           : #000;
+  }
+
+*::-webkit-scrollbar-thumb:hover {
+  background : var(--primay-color);
+  opacity : 0.7;
+  }
+
+::selection {
+  background-color : #000;
+  color            : #fff;
+  }
