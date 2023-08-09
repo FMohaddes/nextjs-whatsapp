@@ -42,7 +42,7 @@ export default function ContactsList() {
                              <div className= { `text-sm capitalize text-primaryColorLight` }>
                                 {
                                    messages[messages.length - 1].message.length >= 50 ?
-                                        <p className={`flex gap-2`}>
+                                        <div className={`flex gap-2`}>
                                            {
                                                 messages[messages.length - 1].sender === 'You' &&
                                                    <div className= { `w-5 h-5 ${ messages[messages.length - 1].seen ?`fill-info`
@@ -53,7 +53,7 @@ export default function ContactsList() {
                                            <p>
                                               { messages[ messages.length - 1 ].message.slice( 0 , 50 ) + "..." }
                                            </p>
-                                        </p>
+                                        </div>
                                  
                                         :
                                         messages[messages.length - 1].mediaType ==='photo' ?
